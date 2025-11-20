@@ -1,9 +1,9 @@
 module sign_extend #(
     WIDTH = 32
-) (
+)(
     input logic  [1:0]             imm_src,  // type of instruction
     input logic  [WIDTH-1:0]       ins,      // entire instruction word
-    output logic [WIDTH-1:0]       imm_op
+    output logic [WIDTH-1:0]       imm_op    // output sign extended imm
 );
 
 always_comb
