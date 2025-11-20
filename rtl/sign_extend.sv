@@ -16,7 +16,7 @@ case (imm_src)   // 2: R type -> do no care as this instruction doesn't use imme
             imm_op <= {{WIDTH-12{1'b1}}, ins[31:25], ins[11:7]}
         else 
             imm_op <= {{WIDTH-12{1'b0}}, ins[31:20]}
-    3:  if (ins[31])    // B type
+    2:  if (ins[31])    // B type
             imm_op <= {{WIDTH-13{1'b1}}, ins[31], ins[7], ins[30:25], ins[11:8], 0}
         else 
             imm_op <= {{WIDTH-13{0'b1}}, ins[31], ins[7], ins[30:25], ins[11:8], 0}
