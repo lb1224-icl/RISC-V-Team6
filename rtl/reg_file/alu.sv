@@ -1,5 +1,5 @@
 module alu #(
-    parameter DATA_WIDTH 32
+    parameter DATA_WIDTH 8
 ) (
     input logic [DATA_WIDTH-1:0] aluop1,
     input logic [DATA_WIDTH-1:0] aluop2,

@@ -1,5 +1,5 @@
 module mux_2 #(
-    DATA_WIDTH = 32
+    DATA_WIDTH = 8
 )(
     input   logic [DATA_WIDTH-1:0]  in0,
     input   logic [DATA_WIDTH-1:0]  in1,
