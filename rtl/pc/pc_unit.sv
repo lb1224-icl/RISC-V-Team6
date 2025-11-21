@@ -10,12 +10,12 @@ module pc_unit #(
 );
 
 
-logic [WIDTH-1:0] inc_pc;
-logic [WIDTH-1:0] branch_pc;
-logic [WIDTH-1:0] next_pc;
+localparam logic [WIDTH-1:0] inc_pc;
+localparam logic [WIDTH-1:0] branch_pc;
+localparam logic [WIDTH-1:0] next_pc;
 
 // Increment PC (pc + 4)
-pc_inc #(.WIDTH(WIDTH)) u_inc (
+pc_inc #(.WIDTH(WIDTH)) u_inc (\
     .pc(pc_in),
     .inc_pc(inc_pc)
 );
