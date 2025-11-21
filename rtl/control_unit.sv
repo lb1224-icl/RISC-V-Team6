@@ -37,7 +37,7 @@ case (opcode)
                     imm_src <= 2;  // type B ins
                     alu_src <= 0;  // the immediate will be fed into the PC and not used in the ALU
                     alu_ctrl <= 1; // we are doing a sub to find the difference between instruction addresses
-                    pc_src <= ~(EQ & 1'b0);   // pc increments to branch address
+                    pc_src <= EQ;   // pc increments to branch address
                 end
     endcase
     
