@@ -1,7 +1,5 @@
 module reg_file #(
-    parameter
-    D_WIDTH = 8,
-    A_WIDTH = 8
+    parameter WIDTH = 32
 ) (
     input logic ad1,
     input logic ad2,
