@@ -22,7 +22,7 @@ TEST_F(CpuTestbench, BaseProgramTest)
 
     for (int i = 0; i < CYCLES; i++)
     {
-        runSimulation(1);
+          runSimulation(1);
         if (top->a0 == 254)
         {
             SUCCEED();

@@ -39,11 +39,11 @@ for file in "${files[@]}"; do
     fi
 
     # Automatically detect latest GoogleTest installation under Homebrew
-    GTEST_BASE=$(brew --prefix googletest 2>/dev/null)
-    if [ -z "$GTEST_BASE" ]; then
-        echo "${RED}Error: GoogleTest not found via Homebrew.${RESET}"
-        exit 1
-    fi
+    # GTEST_BASE=$(brew --prefix googletest 2>/dev/null)
+    # if [ -z "$GTEST_BASE" ]; then
+    #     echo "${RED}Error: GoogleTest not found via Homebrew.${RESET}"
+    #     exit 1
+    # fi
     
     # Construct include and lib paths dynamically
     GTEST_INCLUDE="$GTEST_BASE/include"
@@ -54,6 +54,8 @@ for file in "${files[@]}"; do
                 -cc ${RTL_FOLDER}/${name}.sv \
                 --exe ${file} \
                 -y ${RTL_FOLDER} \
+                -y ${RTL_FOLDER}/pc \
+                -y ${RTL_FOLDER}/reg_file \
                 --prefix "Vdut" \
                 -o Vdut \
                 -CFLAGS "-std=c++17 -isystem ${GTEST_INCLUDE}" \

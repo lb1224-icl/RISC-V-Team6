@@ -1,10 +1,10 @@
 module pc_reg #(
-    parameter WIDTH = 32
+    parameter D_WIDTH = 32
 ) (
-    input  logic             clk,
-    input  logic             rst,
-    input  logic [WIDTH-1:0] pc_in,
-    output logic [WIDTH-1:0] pc_out
+    input  logic               clk,
+    input  logic               rst,
+    input  logic [D_WIDTH-1:0] pc_in,
+    output logic [D_WIDTH-1:0] pc_out
 );
 
 always_ff @(posedge clk or posedge rst) begin
